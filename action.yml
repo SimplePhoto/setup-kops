@@ -1,0 +1,15 @@
+name: 'Kops tool installer'
+description: 'Install a specific version of kops binary. Acceptable values are latest or any semantic version string like 1.15.0'
+inputs: 
+  version:
+    description: 'Version of kops'
+    required: true
+    default: 'latest'
+outputs:
+  kops-path:
+    description: 'Path to the cached kops binary'
+branding:
+  color: 'green'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
